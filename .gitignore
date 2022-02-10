@@ -35,3 +35,15 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# IDEA
+# ----
+.idea
+.idea/
+.shelf
+/*.iml
+/*.ipr
+/*.iws
+
+# vscode
+.vscode
