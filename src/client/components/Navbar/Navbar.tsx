@@ -1,5 +1,5 @@
-import {useTheme} from "next-themes";
-import {Container, Navbar} from "react-bootstrap";
+import { useTheme } from "next-themes";
+import { Container, Navbar } from "react-bootstrap";
 
 const Nav = () => {
   const { theme, setTheme } = useTheme();
