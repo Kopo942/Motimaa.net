@@ -21,7 +21,7 @@
     "@types/node": "^17.0.30",
     "@types/react": "^18.0.8",
     "eslint": "^8.14.0",
-    "eslint-config-next": "^12.1.5",
+    "eslint-config-next": "^12.1.6",
     "prettier": "^2.6.0",
     "stylelint": "^14.8.0",
     "stylelint-config-prettier-scss": "^0.0.1",
