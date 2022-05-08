@@ -16,17 +16,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import "client/styles/bs-custom.scss";
-import "client/styles/globals.css";
-import { ThemeProvider } from "next-themes";
-import type { AppProps } from "next/app";
+import Navigation from "../client/components/Navbar/Navbar";
 
-function App({ Component, pageProps }: AppProps) {
+const Yllapito = () => {
   return (
-    <ThemeProvider enableSystem={false}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <Navigation />
+      <h1>Ylläpito</h1>
+    </>
   );
-}
+};
 
-export default App;
+export default Yllapito;

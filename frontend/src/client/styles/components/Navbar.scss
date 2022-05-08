@@ -16,17 +16,27 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import "client/styles/bs-custom.scss";
-import "client/styles/globals.css";
-import { ThemeProvider } from "next-themes";
-import type { AppProps } from "next/app";
+$navbar-padding-y: 2rem;
+$navbar-nav-link-padding-x: 1.5rem;
 
-function App({ Component, pageProps }: AppProps) {
-  return (
-    <ThemeProvider enableSystem={false}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+.navbar-nav .btn {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 
-export default App;
+.jumbotron {
+  justify-content: center;
+
+  .col {
+    text-align: center;
+  }
+
+  img {
+    max-height: 100px;
+    width: auto;
+  }
+}
+
+.nav-left {
+
+}

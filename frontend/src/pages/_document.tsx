@@ -48,7 +48,7 @@ export default function Document() {
           content="Yksi suomen suurimmista peliyhteisöistä."
         />
       </Head>
-      <body>
+      <body className="bg-dark">
         <Main />
         <NextScript />
       </body>
