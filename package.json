@@ -1,6 +1,7 @@
 {
   "name": "motimaa.net",
   "private": true,
+  "license": "GPLV3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,8 +20,8 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
-    "@types/react": "^18.0.8",
-    "eslint": "^8.14.0",
+    "@types/react": "^18.0.9",
+    "eslint": "^8.15.0",
     "eslint-config-next": "^12.1.6",
     "prettier": "^2.6.0",
     "stylelint": "^14.8.2",
