@@ -5,7 +5,6 @@
     "no-descending-specificity": null,
     "scss/at-rule-no-unknown": true,
     "scss/selector-no-redundant-nesting-selector": true,
-    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
     "scss/at-mixin-pattern": "^[a-z][a-zA-Z0-9]+$",
 
     "order/order": [
