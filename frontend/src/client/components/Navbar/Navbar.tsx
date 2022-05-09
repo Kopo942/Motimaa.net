@@ -44,6 +44,7 @@ const Navigation = () => {
   }
 
   return (
+    <div className="navbar-wrapper">
       <Navbar
         variant={resolvedTheme === "light" ? "light" : "dark"}
         expand="lg"
@@ -81,7 +82,7 @@ const Navigation = () => {
         </Container>
       </Navbar>
       <NavJumbotron />
-    </>
+    </div>
   );
 };
 
