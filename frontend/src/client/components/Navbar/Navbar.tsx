@@ -18,13 +18,23 @@ const NavJumbotron = () => {
 };
 
 const Navigation = () => {
-  const { theme, setTheme } = useTheme();
-  const router = useRouter();
-  const currentPath = router.pathname;
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  const { resolvedTheme, setTheme } = useTheme();
+  const { pathname: currentPath } = useRouter();
 
   const handleThemeChange = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // TODO: This is not really ideal, but fixes render missmatch error.
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <>
