@@ -28,10 +28,15 @@ const Navigation = () => {
   const [mounted, setMounted] = useState<boolean>(false);
 
   const { resolvedTheme, setTheme } = useTheme();
-  const { pathname: currentPath } = useRouter();
+  const router = useRouter();
+  const currentPath = router.pathname;
 
   const handleThemeChange = () => {
     setTheme(resolvedTheme === "light" ? "dark" : "light");
+  };
+
+  const handleRedirect = (url: string) => {
+    router.push(url);
   };
 
   useEffect(() => {
@@ -52,8 +57,14 @@ const Navigation = () => {
         <Container fluid="md" className="navbar-container">
           <Navbar.Toggle aria-controls="navbar" />
           <div className="navbar-icon-container">
-            <Discord />
-            <Instagram />
+            <Discord
+              onClick={() => handleRedirect("https://discord.gg/bY9VQdBVGz")}
+            />
+            <Instagram
+              onClick={() =>
+                handleRedirect("https://www.instagram.com/motisquad")
+              }
+            />
           </div>
           <Navbar.Collapse>
             <Nav className="navbar-left">

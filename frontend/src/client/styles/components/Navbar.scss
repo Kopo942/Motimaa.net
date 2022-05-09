@@ -40,6 +40,10 @@ $navbar-nav-link-padding-x: 1.5rem;
   @media (max-width: 991px) {
     display: none;
   }
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 .navbar-theme-switch {
