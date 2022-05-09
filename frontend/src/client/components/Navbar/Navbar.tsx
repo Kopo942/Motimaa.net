@@ -49,8 +49,13 @@ const Navigation = () => {
         variant={resolvedTheme === "light" ? "light" : "dark"}
         expand="lg"
       >
+        <Container fluid="md" className="navbar-container">
           <Navbar.Toggle aria-controls="navbar" />
-          <Navbar.Collapse className="justify-content-center">
+          <div className="navbar-icon-container">
+            <Discord />
+            <Instagram />
+          </div>
+          <Navbar.Collapse>
             <Nav className="navbar-left">
               <Link href="/" passHref>
                 <Nav.Link active={currentPath === "/"}>Etusivu</Nav.Link>
@@ -79,6 +84,11 @@ const Navigation = () => {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
+          <div className="navbar-theme-switch">
+            <Button variant="link" onClick={handleThemeChange}>
+              <BrightnessHigh /> Vaihda teema
+            </Button>
+          </div>
         </Container>
       </Navbar>
       <NavJumbotron />
