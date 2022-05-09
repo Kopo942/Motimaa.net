@@ -45,14 +45,16 @@ const Navigation = () => {
                 </Nav.Link>
               </Link>
             </Nav>
-            <Button variant="warning" href="https://kauppa.motimaa.net">
-              Kauppa
-            </Button>
+            <Link href="https://rankku.motimaa.net" passHref>
+              <Button variant="warning">Kauppa</Button>
+            </Link>
             <Nav className="navbar-right">
-              <Nav.Link href="https://rankku.motimaa.net">
-                Rangaistukset
-              </Nav.Link>
-              <Nav.Link href="#">Äänestä</Nav.Link>
+              <Link href="https://rankku.motimaa.net" passHref>
+                <Nav.Link>Rangaistukset</Nav.Link>
+              </Link>
+              <Link href="/aanesta" passHref>
+                <Nav.Link active={currentPath === "/aanesta"}>Äänestä</Nav.Link>
+              </Link>
               <NavDropdown title="Lisää">
                 <NavDropdown.Item href="#action/3.1">Test</NavDropdown.Item>
               </NavDropdown>
