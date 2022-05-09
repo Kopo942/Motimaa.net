@@ -44,9 +44,10 @@ const Navigation = () => {
   }
 
   return (
-    <>
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Container fluid>
+      <Navbar
+        variant={resolvedTheme === "light" ? "light" : "dark"}
+        expand="lg"
+      >
           <Navbar.Toggle aria-controls="navbar" />
           <Navbar.Collapse className="justify-content-center">
             <Nav className="navbar-left">
