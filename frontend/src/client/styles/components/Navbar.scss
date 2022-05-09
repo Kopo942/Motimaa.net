@@ -37,6 +37,12 @@ $navbar-nav-link-padding-x: 1.5rem;
   }
 }
 
-.nav-left {
+.navbar-left {
+  width: 50%;
+  justify-content: flex-end;
+}
 
+.navbar-right {
+  width: 50%;
+  justify-content: flex-start;
 }

@@ -1,9 +1,9 @@
 import { useTheme } from "next-themes";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import { Button, Col, Image, Nav, NavDropdown, Row } from "react-bootstrap";
-import { useRouter } from "next/router";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { Button, Col, Image, Nav, NavDropdown, Row } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
 
 const NavJumbotron = () => {
   return (
@@ -31,8 +31,8 @@ const Navigation = () => {
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
           <Navbar.Toggle aria-controls="navbar" />
-          <Navbar.Collapse id="navbar" className="justify-content-center">
-            <Nav className="me-auto">
+          <Navbar.Collapse className="justify-content-center">
+            <Nav className="navbar-left">
               <Link href="/" passHref>
                 <Nav.Link active={currentPath === "/"}>Etusivu</Nav.Link>
               </Link>
@@ -48,7 +48,7 @@ const Navigation = () => {
             <Button variant="warning" href="https://kauppa.motimaa.net">
               Kauppa
             </Button>
-            <Nav className="ms-auto">
+            <Nav className="navbar-right">
               <Nav.Link href="https://rankku.motimaa.net">
                 Rangaistukset
               </Nav.Link>
@@ -60,7 +60,6 @@ const Navigation = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
       <NavJumbotron />
     </>
   );
