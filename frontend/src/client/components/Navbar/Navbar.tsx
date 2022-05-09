@@ -1,18 +1,25 @@
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Button, Col, Image, Nav, NavDropdown, Row } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Button, Nav, NavDropdown } from "react-bootstrap";
+import { BrightnessHigh, Discord, Instagram } from "react-bootstrap-icons";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
 const NavJumbotron = () => {
   return (
-    <Container fluid>
-      <Row className="jumbotron">
-        <Col>
-          <Image src="/logo.png" fluid alt="logo" className="jumbotron"></Image>
-        </Col>
-      </Row>
+    <Container fluid className="jumbotron-container">
+      <Image
+        alt="Motimaa logo"
+        src="/logo.png"
+        height={150}
+        width={150}
+        unoptimized
+      />
+      <h1>Motimaa</h1>
+      <h2>Suomen suurin Minecraft-palvelin jo vuodesta 2016</h2>
     </Container>
   );
 };
