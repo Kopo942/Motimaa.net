@@ -3,21 +3,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Button, Nav, NavDropdown } from "react-bootstrap";
+import { Button, Col, Nav, NavDropdown, Row } from "react-bootstrap";
 import { BrightnessHigh, Discord, Instagram } from "react-bootstrap-icons";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
 const NavJumbotron = () => {
   return (
-    <Container fluid className="jumbotron-container">
-      <Image
-        alt="Motimaa logo"
-        src="/logo.png"
-        height={150}
-        width={150}
-        unoptimized
-      />
+    <Container fluid="md" className="jumbotron-container">
+      <Row className="jumbotron-row">
+        <Col className="jumbotron-playercount">
+          <div>
+            <span>63</span>
+            <span>motimaa.net</span>
+          </div>
+        </Col>
+        <Col>
+          <Image
+            alt="Motimaa logo"
+            src="/logo.png"
+            height={150}
+            width={150}
+            unoptimized
+          />
+        </Col>
+        <Col className="jumbotron-discord"></Col>
+      </Row>
       <h1>Motimaa</h1>
       <h2>Suomen suurin Minecraft-palvelin jo vuodesta 2016</h2>
     </Container>
@@ -81,7 +92,7 @@ const Navigation = () => {
               </Link>
             </Nav>
             <Link href="https://rankku.motimaa.net" passHref>
-              <Button variant="warning">Kauppa</Button>
+              <Button variant="success">Kauppa</Button>
             </Link>
             <Nav className="navbar-right">
               <Link href="https://rankku.motimaa.net" passHref>

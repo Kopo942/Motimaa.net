@@ -49,10 +49,14 @@ $navbar-nav-link-padding-x: 1.5rem;
 .navbar-theme-switch {
   position: absolute;
   right: 0;
-  color: rgb(255 255 255 / 55%);
 
   @media (max-width: 991px) {
     display: none;
+  }
+
+  button {
+    color: rgb(255 255 255 / 55%);
+    text-decoration: none;
   }
 }
 
@@ -60,10 +64,18 @@ $navbar-nav-link-padding-x: 1.5rem;
   text-align: center;
 
   h1 {
-    color: white;
+    background: linear-gradient(
+      45.61deg,
+      #8bbaff -8.65%,
+      #5f5 45.52%,
+      rgb(120 255 231 / 96%) 96.41%
+    );
+    background-clip: border-box;
+    background-clip: text;
     font-weight: 700;
     font-size: 3rem;
     text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
   }
 
   h2 {
@@ -71,6 +83,41 @@ $navbar-nav-link-padding-x: 1.5rem;
     font-weight: 400;
     font-size: 1.5rem;
     text-transform: uppercase;
+  }
+}
+
+.jumbotron-row {
+  align-items: center;
+}
+
+.jumbotron-playercount {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  color: white;
+  font-size: 1.5rem;
+
+  div {
+    padding: 1rem 3rem 1rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #f9f9f905;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+
+    &:hover {
+      scale: 1.02;
+    }
+  }
+
+  span:first-child {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #5f5;
+  }
+
+  span {
+    font-weight: 600;
   }
 }
 
